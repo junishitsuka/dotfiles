@@ -1,10 +1,10 @@
 # make symbolic link
-ln -sf .vimrc ~/
-ln -sf .zshrc ~/
-ln -sf .tmux.conf ~/
-ln -sf .gitignore ~/
-ln -sf .gitconfig ~/
-ln -sf .zshfiles ~/
+ln -sf ~/dotfiles/.vimrc ~/
+ln -sf ~/dotfiles/.zshrc ~/
+ln -sf ~/dotfiles/.tmux.conf ~/
+ln -sf ~/dotfiles/.gitignore ~/
+ln -sf ~/dotfiles/.gitconfig ~/
+ln -sf ~/dotfiles/.zshfiles ~/
 
 # install neobundle
 mkdir -p ~/.vim/bundle
