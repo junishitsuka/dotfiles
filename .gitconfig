@@ -1,0 +1,11 @@
+[alias]
+  st = status
+  ch = checkout
+  b  = branch
+  d  = diff
+  a  = add
+[user]
+  name  = junishitsuka
+  email = ishitsuka.jun@gmail.com
+[core]
+  excludesfile = ~/.gitignore
