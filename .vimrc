@@ -4,11 +4,11 @@
 " タブの画面上での幅
 set tabstop=4
 " タブをスペースに展開する (noexpandtab:展開しない)
-set expandtab 
+set expandtab
 " 自動的にインデントする (noautoindent:インデントしない)
 set autoindent
 " 特定のキーワード後のインデントは、ひとつ下げる
-set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class 
+set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 " 自動インデントでずれる幅
 set shiftwidth=4
 "バックスペースでインデントや改行を削除できるようにする
@@ -68,17 +68,15 @@ set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim 
-endif 
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
 
+" NeoBundle
 call neobundle#begin(expand('~/.vim/bundle'))
-
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " molokai カラースキーム
 NeoBundle 'tomasr/molokai'
-" CoffeeScriptのsyntax highlight
-NeoBundle 'kchmck/vim-coffee-script'
 " 以下は必要に応じて追加
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
@@ -92,12 +90,18 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'macros/matchit.vim'
-let b:match_words = '<div:</div>,<p:</p>'
 
+" scala syntax
+NeoBundle 'derekwyatt/vim-scala'
+" CoffeeScriptのsyntax highlight
+NeoBundle 'kchmck/vim-coffee-script'
 call neobundle#end()
 
 " カラースキームの設定
 colorscheme molokai
+
+" div, p間を%で移動
+let b:match_words = '<div:</div>,<p:</p>'
 
 " Evervim
 nnoremap <Leader>l :EvervimNotebookList<CR>
@@ -108,30 +112,30 @@ nnoremap <Leader>b :EvervimOpenBrowser<CR>
 " ファイル指定で開かれた場合はNERDTreeは表示しない
 let file_name = expand("%:p")
 if has('vim_starting') &&  file_name == ""
-    autocmd VimEnter * call ExecuteNERDTree()
+  autocmd VimEnter * call ExecuteNERDTree()
 endif
 
 " カーソルが外れているときは自動的にnerdtreeを隠す
 function! ExecuteNERDTree()
-    "b:nerdstatus = 1 : NERDTree 表示中
-    "b:nerdstatus = 2 : NERDTree 非表示中
- 
-    if !exists('g:nerdstatus')
-        execute 'NERDTree ./'
-        let g:windowWidth = winwidth(winnr())
-        let g:nerdtreebuf = bufnr('')
-        let g:nerdstatus = 1 
- 
-    elseif g:nerdstatus == 1 
-        execute 'wincmd t'
-        execute 'vertical resize' 0 
-        execute 'wincmd p'
-        let g:nerdstatus = 2 
-    elseif g:nerdstatus == 2 
-        execute 'wincmd t'
-        execute 'vertical resize' g:windowWidth
-        let g:nerdstatus = 1 
-   endif
+  "b:nerdstatus = 1 : NERDTree 表示中
+  "b:nerdstatus = 2 : NERDTree 非表示中
+
+  if !exists('g:nerdstatus')
+    execute 'NERDTree ./'
+    let g:windowWidth = winwidth(winnr())
+    let g:nerdtreebuf = bufnr('')
+    let g:nerdstatus = 1
+
+  elseif g:nerdstatus == 1
+    execute 'wincmd t'
+    execute 'vertical resize' 0
+    execute 'wincmd p'
+    let g:nerdstatus = 2
+  elseif g:nerdstatus == 2
+    execute 'wincmd t'
+    execute 'vertical resize' g:windowWidth
+    let g:nerdstatus = 1
+  endif
 endfunction
 
 " [ctrl e] でNERDTreeを開く
