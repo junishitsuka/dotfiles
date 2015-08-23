@@ -4,7 +4,7 @@ ln -sf .zshrc ~/
 ln -sf .tmux.conf ~/
 ln -sf .gitignore ~/
 ln -sf .gitconfig ~/
-ln -sf .tmux.conf ~/
+ln -sf .zshfiles ~/
 
 # install neobundle
 mkdir -p ~/.vim/bundle
