@@ -77,9 +77,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " molokai カラースキーム
 NeoBundle 'tomasr/molokai'
-" 以下は必要に応じて追加
 NeoBundle 'Shougo/unite.vim'
+" 定型文補完
 NeoBundle 'Shougo/neosnippet.vim'
+" コード補完
 NeoBundle 'Shougo/neocomplcache.vim'
 " def,ifなどの後に改行すると自動でendを挿入してくれる
 NeoBundle 'tpope/vim-endwise'
@@ -90,12 +91,23 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'macros/matchit.vim'
-
 " scala syntax
 NeoBundle 'derekwyatt/vim-scala'
 " CoffeeScriptのsyntax highlight
 NeoBundle 'kchmck/vim-coffee-script'
+" Reference
+NeoBundle 'thinca/vim-ref'
+" Syntax check
+NeoBundle 'scrooloose/syntastic'
 call neobundle#end()
+
+" Syntaxの設定
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=2
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_ruby_checkers=['rubocop']
+let g:ref_phpmanual_path = $HOME . '/.vim/ref/php-chunked-xhtml'
+let $PATH = $PATH . ':/opt/local/bin'
 
 " カラースキームの設定
 colorscheme molokai
@@ -142,3 +154,26 @@ endfunction
 noremap <c-e> :<c-u>:call ExecuteNERDTree()<cr>
 
 filetype plugin indent on
+
+"---------------------------------------------------------------------------
+" 言語毎の設定:
+"
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_manual_completion_start_length = 0
+let g:neocomplcache_caching_percent_in_statusline = 1
+let g:neocomplcache_enable_skip_completion = 1
+let g:neocomplcache_skip_input_time = '0.5'
+
+" PHP settings
+" snippets
+autocmd BufRead *.php\|*.ctp\|*.tpl :set dict=~/.vim/dict/php.dict filetype=php
+
+" syntax
+autocmd FileType php set makeprg=php\ -l\ %
+autocmd BufWritePost *.php silent make | if len(getqflist()) != 1 | copen | else | cclose | endif
+
+autocmd FileType php set tags=$HOME/tags
