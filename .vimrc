@@ -90,7 +90,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'macros/matchit.vim'
+" NeoBundle 'macros/matchit.vim'
 " scala syntax
 NeoBundle 'derekwyatt/vim-scala'
 " CoffeeScriptのsyntax highlight
@@ -99,6 +99,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'thinca/vim-ref'
 " Syntax check
 NeoBundle 'scrooloose/syntastic'
+" IDE for golang
+NeoBundle 'fatih/vim-go'
 call neobundle#end()
 
 " Syntaxの設定
