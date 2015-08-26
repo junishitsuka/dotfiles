@@ -12,6 +12,10 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # 色を使用出来るようにする
 autoload -Uz colors
