@@ -111,6 +111,9 @@ let g:syntastic_ruby_checkers=['rubocop']
 let g:ref_phpmanual_path = $HOME . '/.vim/ref/php-chunked-xhtml'
 let $PATH = $PATH . ':/opt/local/bin'
 
+" vim-goの補完をoffに
+let g:go_fmt_autosave = 0
+
 " カラースキームの設定
 colorscheme molokai
 
