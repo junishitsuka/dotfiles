@@ -6,16 +6,24 @@ export LANG=ja_JP.UTF-8
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source `which virtualenvwrapper.sh`
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
 # golang
 export GOPATH=$HOME/gocode
 export GOROOT=/usr/local/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  export WORKON_HOME=$HOME/.virtualenvs
-  source /usr/local/bin/virtualenvwrapper.sh
-fi
+# julia
+export PATH=$PATH:/Applications/Julia-0.3.11.app/Contents/Resources/julia/bin
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -195,4 +203,5 @@ setopt EXTENDED_HISTORY
 for f ( ~/.zshfiles/peco-sources/* ) source "${f}" # load peco sources
 
 # direnvを反映
+export EDITOR=vim
 eval "$(direnv hook zsh)"
