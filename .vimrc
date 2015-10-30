@@ -101,7 +101,16 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'scrooloose/syntastic'
 " IDE for golang
 NeoBundle 'fatih/vim-go'
+" finder
+NeoBundle 'kien/ctrlp.vim'
 call neobundle#end()
+
+" ctrlp setting
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
 " Syntaxの設定
 let g:syntastic_enable_signs=1
