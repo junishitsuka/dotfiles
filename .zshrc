@@ -205,3 +205,6 @@ for f ( ~/.zshfiles/peco-sources/* ) source "${f}" # load peco sources
 # direnvを反映
 export EDITOR=vim
 eval "$(direnv hook zsh)"
+
+# embulk
+export PATH="$HOME/.embulk/bin:$PATH"
