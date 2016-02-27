@@ -80,6 +80,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'Shougo/unite.vim'
 " 定型文補完
 NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
 " コード補完
 NeoBundle 'Shougo/neocomplcache.vim'
 " def,ifなどの後に改行すると自動でendを挿入してくれる
