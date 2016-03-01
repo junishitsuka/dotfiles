@@ -1,5 +1,6 @@
 # make symbolic link
 ln -sf ~/dotfiles/.vimrc ~/
+ln -sf ~/dotfiles/.vim ~/
 ln -sf ~/dotfiles/.zshrc ~/
 ln -sf ~/dotfiles/.tmux.conf ~/
 ln -sf ~/dotfiles/.gitignore ~/
