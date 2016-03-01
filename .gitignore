@@ -1,3 +1,5 @@
 .DS_Store
 .envrc
 .ipynb_checkpoints
+*.csv
+.vim/bundle
