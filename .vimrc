@@ -118,6 +118,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_ruby_checkers=['rubocop']
+let g:syntastic_python_checkers=['pyflakes', 'pep8']
 let g:ref_phpmanual_path = $HOME . '/.vim/ref/php-chunked-xhtml'
 let $PATH = $PATH . ':/opt/local/bin'
 
