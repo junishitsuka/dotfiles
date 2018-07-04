@@ -6,7 +6,7 @@ Dotfiles, setting files like .vimrc, .zshrc, .tmux.conf...
 
 ```
 $ sudo pip install pep8 pyflakes
-$ git clone https://github.com/junishitsuka/dotfiles.git
+$ git clone git@github.com:junishitsuka/dotfiles.git
 $ sh ./dotfiles/install.sh
 $ vi # NeoBundleInstall
 ```
