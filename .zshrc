@@ -8,14 +8,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-# export VIRTUALENVWRAPPER_PYTHON=`which python`
-# export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
-source `which virtualenvwrapper.sh`
-# source /Users/jun.ishitsuka/.pyenv/shims/virtualenvwrapper.sh
-# source /usr/local/bin/virtualenvwrapper.sh
-
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
