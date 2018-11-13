@@ -10,7 +10,7 @@ set autoindent
 " 特定のキーワード後のインデントは、ひとつ下げる
 set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 " 自動インデントでずれる幅
-set shiftwidth=4
+set shiftwidth=2
 "バックスペースでインデントや改行を削除できるようにする
 set backspace=2
 " 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)

@@ -2,13 +2,19 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
+# export VIRTUALENVWRAPPER_PYTHON=`which python`
+# export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
 source `which virtualenvwrapper.sh`
+# source /Users/jun.ishitsuka/.pyenv/shims/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -19,7 +25,7 @@ eval "$(pyenv init -)"
 
 # golang
 export GOPATH=$HOME/gocode
-export GOROOT=/usr/local/go
+export GOROOT=/usr/local/Cellar/go/1.11.1/libexec
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # julia
@@ -208,3 +214,9 @@ eval "$(direnv hook zsh)"
 
 # embulk
 export PATH="$HOME/.embulk/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jun.ishitsuka/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jun.ishitsuka/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jun.ishitsuka/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jun.ishitsuka/google-cloud-sdk/completion.zsh.inc'; fi
