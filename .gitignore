@@ -8,3 +8,5 @@ tags
 .ruby-version
 tmp
 .idea
+.vscode
+.bundle
