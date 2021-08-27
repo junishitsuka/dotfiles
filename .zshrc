@@ -2,8 +2,6 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
