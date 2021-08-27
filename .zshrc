@@ -206,6 +206,12 @@ eval "$(direnv hook zsh)"
 
 # embulk
 export PATH="$HOME/.embulk/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/ishitsuka.jun/.sdkman"
+[[ -s "/Users/ishitsuka.jun/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ishitsuka.jun/.sdkman/bin/sdkman-init.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jun.ishitsuka/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jun.ishitsuka/google-cloud-sdk/path.zsh.inc'; fi

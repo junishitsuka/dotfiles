@@ -4,6 +4,7 @@
   b  = branch
   d  = diff
   a  = add
+  delete-merged-branch = "!f () { git ch $1; git b --merged | egrep -v '\\*|develop|master' | xargs git b -d; };f"
 [user]
   name  = junishitsuka
   email = ishitsuka.jun@gmail.com

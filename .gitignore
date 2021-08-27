@@ -1,12 +1,14 @@
 .DS_Store
 .envrc
 .ipynb_checkpoints
-*.csv
 .vim/bundle
 .python-version
+*.csv
 tags
 .ruby-version
 tmp
 .idea
 .vscode
 .bundle
+google-cloud-sdk
+docker-compose.yml.org
