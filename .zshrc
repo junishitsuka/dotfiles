@@ -11,6 +11,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # golang
