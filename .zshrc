@@ -15,12 +15,20 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # golang
-export GOPATH=$HOME/gocode
-export GOROOT=/usr/local/Cellar/go/1.11.1/libexec
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export GOPATH="$HOME/go"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+# export GOPATH=$HOME/gocode
+# export GOROOT=/usr/local/Cellar/go/1.11.1/libexec
+# export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # julia
 export PATH=$PATH:/Applications/Julia-0.3.11.app/Contents/Resources/julia/bin
@@ -211,12 +219,8 @@ export PATH="$HOME/.embulk/bin:$PATH"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/ishitsuka.jun/.sdkman"
-[[ -s "/Users/ishitsuka.jun/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ishitsuka.jun/.sdkman/bin/sdkman-init.sh"
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jun.ishitsuka/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jun.ishitsuka/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/ishitsuka.jun/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ishitsuka.jun/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/jun.ishitsuka/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jun.ishitsuka/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/ishitsuka.jun/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ishitsuka.jun/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
