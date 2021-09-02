@@ -10,3 +10,5 @@
   email = ishitsuka.jun@gmail.com
 [core]
   excludesfile = ~/.gitignore
+[pull]
+  rebase = true
