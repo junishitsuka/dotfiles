@@ -124,6 +124,7 @@ let $PATH = $PATH . ':/opt/local/bin'
 
 " vim-goの補完をoffに
 let g:go_fmt_autosave = 0
+let g:go_gorename_command = 'gopls'
 
 " カラースキームの設定
 colorscheme molokai
