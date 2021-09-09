@@ -224,3 +224,8 @@ if [ -f '/Users/ishitsuka.jun/Downloads/google-cloud-sdk/path.zsh.inc' ]; then .
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ishitsuka.jun/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ishitsuka.jun/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+source ~/.zshfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zshfiles/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
