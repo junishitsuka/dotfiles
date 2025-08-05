@@ -2,10 +2,8 @@
 .envrc
 .ipynb_checkpoints
 .vim/bundle
-.python-version
 *.csv
 tags
-.ruby-version
 tmp
 .idea
 .vscode
